@@ -110,6 +110,6 @@ function getPlace() {
                 document.getElementById("state").value = place[1];
         }
     }
-    xhr.open("GET", "index.php?zip=" + zip);
+    xhr.open("GET", "cityState.php?zip=" + zip);
     xhr.send(null);
 }
