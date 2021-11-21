@@ -1,0 +1,25 @@
+{
+	"firstName":"Mohammad",
+	"lastName":"Alabed",
+	"preferredName":"Moe",
+	"email":"mohammadsalabed@lewisu.edu",
+	"phoneNumber":"708-248-4104",
+	"city":"Palos Hills",
+	"state":"IL",
+	"zip":"60465",
+	"lat":"41.69",
+	"lng":"-87.81",
+	"favoriteHobby":"Gaming",
+	"class":"cpsc-24700-001",
+	"room":"AS-104-A",
+	"startTime":"3pm CT",
+	"seatNumber":"",
+	"inPerson":[ 
+        "Monday",
+        "Wednesday"
+	],
+	"virtual":[
+		"Friday"
+	],
+    "birthdate":"04-29-1997"
+}

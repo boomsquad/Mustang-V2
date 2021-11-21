@@ -1,0 +1,25 @@
+{
+	"firstName":"Iron",
+	"lastName":"Man",
+	"preferredName":"Iron Man",
+	"email":"starkindustry@lewisu.edu",
+	"phoneNumber":"717-123-4567",
+	"city":"Long Island",
+	"state":"NY",
+	"zip":"11930",
+	"lat":"40.78",
+	"lng":"-73.13",
+	"favoriteHobby":"Flying",
+	"class":"cpsc-24700-001",
+	"room":"AS-104-A",
+	"startTime":"3pm CT",
+	"seatNumber":"",
+	"inPerson":[
+	],
+	"virtual":[
+		"Monday",
+		"Wednesday",
+		"Friday"
+	],
+    "birthdate":"5-29-1970"
+}

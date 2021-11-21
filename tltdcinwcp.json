@@ -1,0 +1,25 @@
+{
+	"firstName":"Harry",
+	"lastName":"Potter",
+	"preferredName":"Harry",
+	"email":"hpotter@lewisu.edu",
+	"phoneNumber":"899-899-7272",
+	"city":"Godric's Hollow",
+	"state":"England",
+	"zip":"07101",
+	"lat":"52.35",
+	"lng":"-1.17",
+	"favoriteHobby":"Quidditch",
+	"class":"cpsc-24700-001",
+	"room":"AS-104-A",
+	"startTime":"3pm CT",
+	"seatNumber":"",
+	"inPerson":[
+	],
+	"virtual":[
+		"Monday",
+		"Wednesday",
+		"Friday"
+	],
+    "birthdate":"7-31-1980"
+}
