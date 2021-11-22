@@ -18,3 +18,5 @@ a {cursor: pointer;
     text-decoration: underline;
     color: blue;
     margin-right: 4px;}
+
+.hide {display: none;}

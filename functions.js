@@ -1,6 +1,8 @@
 var selectedRow = null;
 
 function create() {
+
+    if (validate()) {
         var data = readFormData();
 
         if (selectedRow == null) {
@@ -11,6 +13,7 @@ function create() {
         }
 
         resetForm();
+    }
 }
 
 function readFormData() {
@@ -99,17 +102,35 @@ function getPlace() {
     console.log("zip:"+zip);
     var xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            var result = xhr.responseText;
-            console.log("result:"+result);
-            var place = result.split(', ');
-            if (document.getElementById("city").value == "")
-                document.getElementById("city").value = place[0];
-            if (document.getElementById("state").value == "")
-                document.getElementById("state").value = place[1];
+    if (document.getElementById("zip").length > 5) {
+
+    } else {
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var result = xhr.responseText;
+                console.log("result:"+result);
+                var place = result.split(', ');
+                if (document.getElementById("city").value == "")
+                    document.getElementById("city").value = place[0];
+                if (document.getElementById("state").value == "")
+                    document.getElementById("state").value = place[1];
+            }
         }
     }
     xhr.open("GET", "cityState.php?zip=" + zip);
     xhr.send(null);
+}
+
+function validate() {
+    isValid = true;
+    if (document.getElementById("zip").value.length > 5) {
+        isValid = false;
+        document.getElementById("validation").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("validation").classList.contains("hide")) {
+            document.getElementById("validation").classList.add("hide");
+        }
+    }
+    return isValid;
 }
