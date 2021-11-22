@@ -19,4 +19,12 @@ a {cursor: pointer;
     color: blue;
     margin-right: 4px;}
 
+label.validation {color: red;}
+
 .hide {display: none;}
+
+#searchField {width: 25%;
+    height: 25px;
+    font-size: 15px;
+    margin: 8px 0;
+    padding: 5px;}

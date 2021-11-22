@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
- 
     <body>
         <table>
             <tr>
@@ -29,7 +28,7 @@
                             <input type="text" name="phoneNumber" id="phoneNumber">
                         </div>
                         <div>
-                            <label>Zip</label><label class="validation hide" id="validation">Must be a 5-digit zip code!</label>
+                            <label>Zip</label><label class="validation hide" id="validation"> *Must be a 5-digit zip code!</label>
                             <input type="text" name="zip" id="zip" onblur="zipBlurFunction()">
                         </div>
                         <div>
@@ -48,38 +47,25 @@
                             <input type="submit" value="submit" class="submit">
                         </div>
                     </form>
-                </td>
-
-                
+                </td> 
             </tr>
             <tr>
+                <input type="text" id="searchField" onkeyup="search()" placeholder="Search for contact by first name...">
                     <table class="list" id="list">
-                            <td>First Name</td>
-                            <td>Last Name</td>
-                            <td>Preferred Name</td>
-                            <td>Phone Number</td>
-                            <td>Zip</td>
-                            <td>City</td>
-                            <td>State</td>
-                            <td>Favorite Hobby</td>
-                            <td></td>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Preferred Name</th>
+                        <th>Phone Number</th>
+                        <th>Zip</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Favorite Hobby</th>
+                        <th></th>
                         <tbody>
 
                         </tbody>
-                    </table>
-                
+                    </table> 
             </tr>
         </table>
-        
-
-        <!--
-        Mohammad Alabed: <a href="mpbjvyapwk.json">[Link]</a>
-        <br>
-        Harry Potter: <a href="tltdcinwcp.json">[Link]</a>
-        <br>
-        Iron Man: <a href="smzvowlnhz.json">[Link]</a>
-
-        https://www.youtube.com/watch?v=-rNQeJi3Wp4&ab_channel=CodAffection
-        -->
     </body>
 </html>

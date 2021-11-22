@@ -99,24 +99,19 @@ function zipBlurFunction() {
 
 function getPlace() {
     var zip = document.getElementById("zip").value;
-    console.log("zip:"+zip);
     var xhr = new XMLHttpRequest();
 
-    if (document.getElementById("zip").length > 5) {
-
-    } else {
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                var result = xhr.responseText;
-                console.log("result:"+result);
-                var place = result.split(', ');
-                if (document.getElementById("city").value == "")
-                    document.getElementById("city").value = place[0];
-                if (document.getElementById("state").value == "")
-                    document.getElementById("state").value = place[1];
-            }
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var result = xhr.responseText;
+            var place = result.split(', ');
+            if (document.getElementById("city").value == "")
+                document.getElementById("city").value = place[0];
+            if (document.getElementById("state").value == "")
+                document.getElementById("state").value = place[1];
         }
     }
+    
     xhr.open("GET", "cityState.php?zip=" + zip);
     xhr.send(null);
 }
@@ -133,4 +128,26 @@ function validate() {
         }
     }
     return isValid;
+}
+
+function search() {
+    var input, filter, table, tr, td, i, value;
+
+    input = document.getElementById("searchField");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("list");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        
+        if (td) {
+            value = td.textContent || td.innerText 
+            if (value.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = ""; 
+            } else {
+                tr[i].style.display = "none"
+            }
+        }
+    }
 }
