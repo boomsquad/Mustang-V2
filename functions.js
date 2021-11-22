@@ -1,7 +1,6 @@
 var selectedRow = null;
 
 function create() {
-
     if (validate()) {
         var data = readFormData();
 
@@ -11,9 +10,8 @@ function create() {
         } else {
             update(data);
         }
-
-        resetForm();
     }
+    resetForm();
 }
 
 function readFormData() {
